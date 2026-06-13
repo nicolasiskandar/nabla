@@ -522,7 +522,10 @@ static ExprMeta infer_expr_meta(Node *body)
 static bool expr_body_is_silent(Node *body)
 {
     if (auto *call = dynamic_cast<CallNode *>(body))
-        return call->get_callee() == "print" || call->get_callee() == "type";
+        return call->get_callee() == "print" ||
+               call->get_callee() == "type" ||
+               call->get_callee() == "printd" ||
+               call->get_callee() == "putchard";
     if (auto *bin = dynamic_cast<BinaryNode *>(body))
         return bin->get_op() == "=" && dynamic_cast<SymNode *>(bin->get_lhs());
     if (auto *let = dynamic_cast<LetNode *>(body))

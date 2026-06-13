@@ -1731,6 +1731,20 @@ llvm::Value *CallNode::compile()
 {
     g_di.emit_pos(this);
 
+    if (callee == "printd" || callee == "putchard")
+    {
+        if (args.size() != 1)
+            return err_v("argument count mismatch");
+        auto *v = args[0]->compile();
+        if (!v)
+            return nullptr;
+        v = promote_to_double(v);
+        auto *fn = g_mod->getFunction(callee);
+        if (!fn)
+            return err_v("unknown function");
+        return g_ir->CreateCall(fn, {v}, callee == "printd" ? "pd" : "pch");
+    }
+
     if (callee == "sqrt")
         return compile_sqrt(args);
     if (callee == "sin")
