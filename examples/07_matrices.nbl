@@ -1,0 +1,18 @@
+let A: matrix[2, 3] = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] in
+let B: matrix[3, 2] = [7.0, 8.0, 9.0, 10.0, 11.0, 12.0] in
+let C: matrix[2, 2] = A @ B in
+    print(C[0, 0]) + print(C[0, 1]) + print(C[1, 0]) + print(C[1, 1])
+
+let D: matrix[2, 3] = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] in
+let Dt: matrix[3, 2] = D' in
+    print(Dt[0, 0]) + print(Dt[0, 1]) + print(Dt[1, 0]) + print(Dt[1, 1]) + print(Dt[2, 0]) + print(Dt[2, 1])
+
+let E: matrix[1, 4] = [1.0, 2.0, 3.0, 4.0] in
+let F: matrix[1, 4] = [5.0, 6.0, 7.0, 8.0] in
+let dp = dot(E, F) in
+    print(dp)
+
+let G: matrix[2, 2] = [4.0, 1.0, 1.0, 3.0] in
+let Gt: matrix[2, 2] = G' in
+let G2: matrix[2, 2] = G @ Gt in
+    print(G2[0, 0]) + print(G2[0, 1]) + print(G2[1, 0]) + print(G2[1, 1])

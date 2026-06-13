@@ -1,0 +1,14 @@
+# Input and mutation
+
+let x = 42 in
+    let _ = print(x) in
+        type(x)
+
+mut y = 7.0 in
+    let _ = (y = y + 1.0) in
+        let _ = print(y) in
+            type(y)
+
+mut a = [1.0, 2.0, 3.0] in
+    let _ = (a[1] = 99.0) in
+        print(a[0]) + print(a[1]) + print(a[2])

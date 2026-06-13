@@ -1,0 +1,8 @@
+extern sin(x)
+extern cos(x)
+extern pow(x, y)
+
+let pi = 3.1415926535 in
+    print(sin(pi / 2.0)) +
+    print(cos(pi)) +
+    print(pow(2.0, 10.0))

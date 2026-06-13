@@ -1,0 +1,17 @@
+# Immutable bindings
+let x = 10.0 in
+    print(x)
+
+let a = 5.0, b = 3.0 in
+    print(a + b)
+
+let y: float = 42.0 in
+    print(y)
+
+# Typed matrices
+let m: matrix[2, 3] = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] in
+    print(m[0, 0]) + print(m[1, 2])
+
+# Mutable bindings
+mut z = 7.0 in
+    print(z) + (z = 99.0) + print(z)

@@ -1,0 +1,56 @@
+# Integers
+print(42)
+print(2 + 3 * 4)
+print(10 / 3)
+print(-5)
+print(!1)
+print(!0)
+
+# Comparisons and logic
+print(3 < 5)
+print(3 > 5)
+print(3 == 3)
+print(3 != 4)
+print(3 <= 5)
+print(3 >= 3)
+print(1 && 0)
+print(1 || 0)
+
+# Typed variables
+let x: int = 10 in
+    print(x)
+
+let a: int = 5, b: int = 3 in
+    print(a + b)
+
+let y = 42 in
+    print(y)
+
+# Integers in control flow
+if 1 then print(10.0) else print(20.0)
+if 0 then print(30.0) else print(40.0)
+
+mut w: int = 3 in
+    while w > 0
+        let _ = print(w) in w = w - 1
+
+# Booleans
+print(true)
+print(false)
+print(true && false)
+print(true || false)
+print(!true)
+print(!false)
+
+let t: bool = true in
+    let _ = print(t) in
+        if t then print(99.0) else print(0.0)
+
+let f: bool = false in
+    let _ = print(f) in
+        if f then print(1.0) else print(100.0)
+
+# Mixed promotion
+print(2 + 3.0)
+print(10.0 / 3)
+print(1 && 0.0)

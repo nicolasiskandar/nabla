@@ -1,0 +1,87 @@
+#include "token.h"
+
+std::string token_desc(int token)
+{
+    switch (token)
+    {
+    case TOK_EOF:
+        return "eof";
+    case TOK_DEF:
+        return "def";
+    case TOK_EXT:
+        return "extern";
+    case TOK_SYM:
+        return "identifier";
+    case TOK_FLOAT:
+        return "float";
+    case TOK_IF:
+        return "if";
+    case TOK_THEN:
+        return "then";
+    case TOK_ELSE:
+        return "else";
+    case TOK_ELIF:
+        return "elif";
+    case TOK_FOR:
+        return "for";
+    case TOK_IN:
+        return "in";
+    case TOK_BIN:
+        return "binary";
+    case TOK_UNA:
+        return "unary";
+    case TOK_VAR:
+        return "var";
+    case TOK_WHILE:
+        return "while";
+    case TOK_BREAK:
+        return "break";
+    case TOK_CONTINUE:
+        return "continue";
+    case TOK_SWITCH:
+        return "switch";
+    case TOK_CASE:
+        return "case";
+    case TOK_DEFAULT:
+        return "default";
+    case TOK_STRUCT:
+        return "struct";
+    case TOK_STR:
+        return "string";
+    case TOK_INT:
+        return "integer";
+    case TOK_TRUE:
+        return "true";
+    case TOK_FALSE:
+        return "false";
+    case TOK_EQ:
+        return "==";
+    case TOK_NE:
+        return "!=";
+    case TOK_LE:
+        return "<=";
+    case TOK_GE:
+        return ">=";
+    case TOK_AND:
+        return "&&";
+    case TOK_OR:
+        return "||";
+    case TOK_ARROW:
+        return "->";
+    case TOK_REC:
+        return "record";
+    case TOK_DOT:
+        return "dot";
+    case TOK_GRAD:
+        return "grad";
+    case TOK_JACOBIAN:
+        return "jacobian";
+    case TOK_NABLA:
+        return "nabla";
+    case TOK_MUT:
+        return "mut";
+    case TOK_POW:
+        return "**";
+    }
+    return std::string(1, (char)token);
+}

@@ -1,0 +1,19 @@
+# Control flow
+if 1 < 2 then print(42.0) else print(0.0)
+if 1 > 2 then print(1.0) elif 1 < 2 then print(2.0) else print(3.0)
+
+# For loops
+mut s = 0.0 in
+    for i = 0.0, i < 5.0 in
+        let _ = print(i) in s = s + i
+
+# While loops
+mut w = 0.0 in
+    while w < 3.0
+        let _ = print(w) in w = w + 1.0
+
+# Switch
+switch 2.0
+case 1.0 then print(10.0)
+case 2.0 then print(20.0)
+default print(0.0)

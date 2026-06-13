@@ -1,0 +1,12 @@
+let V: matrix[1, 5] = [1.0, 2.0, 3.0, 4.0, 5.0] in
+    print(mean(V)) + print(avr(V))
+
+let W: matrix[1, 5] = [1.0, 2.0, 3.0, 4.0, 5.0] in
+    print(std(W))
+
+let U: matrix[1, 5] = [1.0, 2.0, 3.0, 4.0, 5.0] in
+    print(norm(U))
+
+let X: matrix[1, 4] = [1.0, 2.0, 3.0, 4.0] in
+let Y: matrix[1, 4] = [5.0, 6.0, 7.0, 8.0] in
+    print(cov(X, Y)) + print(corr(X, Y))

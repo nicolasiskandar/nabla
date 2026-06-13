@@ -1,0 +1,17 @@
+print(sqrt(9.0))
+print(sqrt(2.0))
+
+let I: matrix[3, 3] = eye(3.0) in
+    print(I[0, 0]) + print(I[1, 1]) + print(I[2, 2])
+
+let Z: matrix[1, 4] = zeros(4.0) in
+    print(Z[0, 0]) + print(Z[0, 3])
+
+let O: matrix[3, 1] = ones(3.0) in
+    print(O[0, 0]) + print(O[1, 0]) + print(O[2, 0])
+
+let L: matrix[1, 5] = linspace(0.0, 1.0, 5.0) in
+    print(L[0, 0]) + print(L[0, 1]) + print(L[0, 2]) + print(L[0, 3]) + print(L[0, 4])
+
+let R: matrix[1, 5] = range(1.0, 5.0) in
+    print(R[0, 0]) + print(R[0, 1]) + print(R[0, 2]) + print(R[0, 3]) + print(R[0, 4])

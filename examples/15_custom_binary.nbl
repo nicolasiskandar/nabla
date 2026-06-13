@@ -1,0 +1,4 @@
+fn binary^ 50 (x, y) x * x + y * y
+
+print(3.0 ^ 4.0)
+print(5.0 ^ 6.0)

@@ -1,0 +1,6 @@
+fn unary!(x)
+    if x == 0.0 then 1.0 else 0.0
+
+let a = !1.0 in
+let b = !0.0 in
+    print(a) + print(b)

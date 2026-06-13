@@ -1,0 +1,55 @@
+# Advanced Matrix Operations
+#
+# Demonstrate common linear algebra patterns:
+# - Matrix composition and chaining
+# - Solving systems and verifying the result
+# - Inversion and eigenvalue routines
+# - Shape-preserving transpose checks
+
+# Example 1: Solve Ax = b and verify
+print("=== Example 1: Linear System ===")
+let A1: matrix[3, 3] = [
+    4.0, 3.0, 1.0,
+    3.0, 5.0, 2.0,
+    1.0, 2.0, 3.0
+] in
+let b1: matrix[3, 1] = [10.0, 15.0, 8.0] in
+let x1 = solve(A1, b1) in
+    let _ = print("Solution x:") in
+        let _ = print(x1) in
+            let _ = print("A @ x (should match b):") in
+                print(A1 @ x1)
+
+# Example 2: Compute inverse and verify A*A^{-1} = I
+print("=== Example 2: Matrix Inverse ===")
+let A2: matrix[2, 2] = [4.0, 7.0, 2.0, 6.0] in
+let A2_inv = inv(A2) in
+    let _ = print("A @ A^{-1} (should be identity):") in
+        print(A2 @ A2_inv)
+
+# Example 3: Eigenvalue decomposition for symmetric matrix
+print("=== Example 3: Eigenvalues ===")
+let A3: matrix[2, 2] = [3.0, 1.0, 1.0, 2.0] in
+let evals = eig(A3) in
+    let _ = print("Eigenvalues:") in
+        print(evals)
+
+# Example 4: Transpose and verify (A^T)^T = A
+print("=== Example 4: Transpose ===")
+let A4: matrix[2, 3] = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] in
+let A4T = A4' in
+let A4TT = A4T' in
+    let _ = print("Original shape: 2×3") in
+        let _ = print(A4) in
+            let _ = print("Transposed shape: 3×2") in
+                let _ = print(A4T) in
+                    let _ = print("Double-transposed shape: 2×3") in
+                        print(A4TT)
+
+# Example 5: Matrix chain multiplication with dimension checking
+print("=== Example 5: Chain Multiplication ===")
+let B: matrix[3, 2] = [1.0, 2.0, 3.0, 4.0, 5.0, 6.0] in
+let C: matrix[2, 4] = [1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0] in
+let BC = B @ C in    # 3×4 result
+    let _ = print("B @ C shape: 3×4") in
+        print(BC)

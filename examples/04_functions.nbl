@@ -1,0 +1,14 @@
+fn square(x) x * x
+fn add(x, y) x + y
+fn factorial(n)
+    if n <= 1.0 then 1.0 else n * factorial(n - 1.0)
+fn dot_product(x: matrix[1, 3], y: matrix[1, 3])
+    x[0, 0] * y[0, 0] + x[0, 1] * y[0, 1] + x[0, 2] * y[0, 2]
+
+print(square(5.0))
+print(add(3.0, 7.0))
+print(factorial(5.0))
+
+let a: matrix[1, 3] = [1.0, 2.0, 3.0] in
+let b: matrix[1, 3] = [4.0, 5.0, 6.0] in
+    print(dot_product(a, b))

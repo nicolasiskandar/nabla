@@ -1,0 +1,28 @@
+# Polynomial fitting via least squares
+#
+# Fit a quadratic model to synthetic data using the normal equations:
+#   X^T X β = X^T y
+# where X is the design matrix, y is the target vector, and β are coefficients.
+
+# Synthetic data: y = 2x² + 3x + 1
+
+# Design matrix for degree 2: [1, x, x²]
+let X: matrix[6, 3] = [
+    1.0, 0.0, 0.0,
+    1.0, 1.0, 1.0,
+    1.0, 2.0, 4.0,
+    1.0, 3.0, 9.0,
+    1.0, 4.0, 16.0,
+    1.0, 5.0, 25.0
+] in
+
+# Target vector
+let y: matrix[6, 1] = [
+    1.0, 6.0, 15.0, 28.0, 45.0, 66.0
+] in
+
+# Normal equations: β = (X^T X)^{-1} X^T y
+let XtX = X' @ X in
+let Xty = X' @ y in
+let beta = solve(XtX, Xty) in
+    print(beta)

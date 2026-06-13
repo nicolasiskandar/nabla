@@ -1,0 +1,16 @@
+let A: matrix[2, 2] = [3.0, 1.0, 1.0, 2.0] in
+    print(det(A))
+
+let B: matrix[2, 2] = [1.0, 2.0, 3.0, 4.0] in
+let b: matrix[2, 1] = [5.0, 11.0] in
+let x = solve(B, b) in
+    print(x[0, 0]) + print(x[1, 0])
+
+let C: matrix[2, 2] = [1.0, 2.0, 3.0, 4.0] in
+let Ci = inv(C) in
+let P = C @ Ci in
+    print(P[0, 0]) + print(P[0, 1]) + print(P[1, 0]) + print(P[1, 1])
+
+let D: matrix[2, 2] = [4.0, 1.0, 1.0, 3.0] in
+let ev: matrix[1, 2] = eig(D) in
+    print(ev[0, 0]) + print(ev[0, 1])

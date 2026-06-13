@@ -1,0 +1,6 @@
+fn f(x: matrix[1, 1])
+    (x[0, 0] - 3.0) * (x[0, 0] - 3.0) + 5.0
+
+let p: matrix[1, 1] = [10.0] in
+let g = grad(f, p) in
+    print(g[0, 0])

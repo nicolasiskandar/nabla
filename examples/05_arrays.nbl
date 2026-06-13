@@ -1,0 +1,5 @@
+let values = [1.0, 2.0, 3.0, 4.0, 5.0] in
+let first = values[0] in
+let last = values[4] in
+let size = len(values) in
+    print(first) + print(last) + print(size)

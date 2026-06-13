@@ -1,0 +1,33 @@
+# Linear regression
+#
+# Minimize mean-squared error with gradient descent:
+#   L(w, b) = (1/n) Σ(w*x_i + b - y_i)²
+
+# Loss function for linear regression
+fn mse_loss(params: matrix[1, 2])
+    (
+        (params[0, 0] * 0.0 + params[0, 1] - 2.0) ** 2.0 +
+        (params[0, 0] * 1.0 + params[0, 1] - 5.1) ** 2.0 +
+        (params[0, 0] * 2.0 + params[0, 1] - 7.9) ** 2.0 +
+        (params[0, 0] * 3.0 + params[0, 1] - 11.2) ** 2.0 +
+        (params[0, 0] * 4.0 + params[0, 1] - 14.1) ** 2.0 +
+        (params[0, 0] * 5.0 + params[0, 1] - 16.9) ** 2.0 +
+        (params[0, 0] * 6.0 + params[0, 1] - 19.8) ** 2.0 +
+        (params[0, 0] * 7.0 + params[0, 1] - 23.1) ** 2.0 +
+        (params[0, 0] * 8.0 + params[0, 1] - 25.9) ** 2.0 +
+        (params[0, 0] * 9.0 + params[0, 1] - 29.0) ** 2.0 +
+        (params[0, 0] * 10.0 + params[0, 1] - 32.1) ** 2.0
+    ) / 11.0
+
+# Single gradient step
+let lr = 0.001 in
+let params: matrix[1, 2] = [0.0, 0.0] in
+let grad_params = ∇mse_loss(params) in
+let next_params: matrix[1, 2] = [
+    params[0, 0] - lr * grad_params[0, 0],
+    params[0, 1] - lr * grad_params[0, 1]
+] in
+    print(mse_loss(params)) +
+    print(mse_loss(next_params)) +
+    print(next_params[0, 0]) +
+    print(next_params[0, 1])

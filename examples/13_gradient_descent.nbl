@@ -1,0 +1,14 @@
+fn f(x: matrix[1, 1])
+    (x[0, 0] - 3.0) * (x[0, 0] - 3.0) + 5.0
+
+let lr = 0.3 in
+let x0: matrix[1, 1] = [10.0] in
+let g0 = ∇f(x0) in
+let x1 = x0[0, 0] - lr * g0[0, 0] in
+let m1: matrix[1, 1] = [x1] in
+let g1 = ∇f(m1) in
+let x2 = x1 - lr * g1[0, 0] in
+let m2: matrix[1, 1] = [x2] in
+let g2 = ∇f(m2) in
+let x3 = x2 - lr * g2[0, 0] in
+    print(x0[0, 0]) + print(x1) + print(x2) + print(x3)

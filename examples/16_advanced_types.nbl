@@ -1,0 +1,12 @@
+# Comments: `#`, `//`, and `/* ... */`
+
+fn add(x, y) -> float x + y
+print(add(3.0, 7.0))
+
+let s: str = "hello" in
+    print(s) + print(" world")
+
+fn greet(n: float) -> void print(n)
+greet(99.0)
+
+print("abc") + printd(42.0) + putchard(10)
