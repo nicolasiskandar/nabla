@@ -212,9 +212,12 @@ result->addIncoming(else_val, else_bb);
 - **Transpose `'`**: Creates new allocation and copies transposed elements
 - **Dot product**: Element-wise multiply, then sum
 
-#### Automatic Differentiation
+## A Note on `∇`
 
-- **`grad(f, x)`**: Compiles using symbolic differentiation or runtime autodiff
+`∇f(x)` and `jacobian(f, x)` currently compute derivatives via **central
+finite differences**: $\nabla f(x)_i \approx \frac{f(x+\epsilon e_i) -
+f(x-\epsilon e_i)}{2\epsilon}$, with truncation error $O(\epsilon^2)$.
+
 - **Type checking**: Validates that `f` returns a scalar and `x` is a matrix
 - **Dimension tracking**: Ensures output gradient matches input shape
 

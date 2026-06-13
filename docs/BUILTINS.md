@@ -1,6 +1,6 @@
 # Builtins Reference
 
-Runtime functions for I/O, math, statistics, linear algebra, and autodiff.
+Runtime functions for I/O, math, statistics, linear algebra, and finite-difference.
 
 All builtins are available without `extern` declarations. Output is written to `stderr`.
 
@@ -259,7 +259,7 @@ let A: matrix[2, 2] = [1.0, 0.5, 0.5, 2.0] in
 
 ---
 
-## Automatic Differentiation
+## Finite-Difference
 
 ### `grad(f, x)`
 
